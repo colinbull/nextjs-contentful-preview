@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Link from 'next/link'
 import { getPage } from '../lib/contentful'
 
 type PageFields = {
@@ -10,9 +11,9 @@ const Page = (fields:PageFields) => {
 
   return (<div>
     {fields.preview ?
-      <a href="/api/exit-preview">
+      <Link href="/api/exit-preview">
           Click here to exit preview mode.
-      </a> : null }      
+      </Link> : null }      
     <h1>{fields.title}</h1>
   </div>)
 }
