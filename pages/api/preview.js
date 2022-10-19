@@ -3,7 +3,7 @@ import { getPage } from '../../lib/contentful'
 export default async function preview(req, res) {
   const { secret, slug } = req.query
 
-  if (secret !== process.env.CONTENTFUL_PREVIEW_SECRET || !slug) {
+  if (secret !== "colin" || !slug) {
     return res.status(401).json({ message: 'Invalid token' })
   }
 
